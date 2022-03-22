@@ -22,8 +22,9 @@ namespace RepositoryOfVehicle.DataAccess.Concrete.EntityFramework
                              on bus.Color.Id equals b.Id
                              select new BusColorDetailsDto
                              {
-                                 ColorId=bus.Color.Id,
                                  BusId = bus.Id,
+                                 BusName=bus.Name,
+                                 ColorId =bus.Color.Id,
                                  ColorName = b.ColorName,
 
                              };

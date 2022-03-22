@@ -38,6 +38,12 @@ namespace RepositoryOfVehicle.WebApi
             services.AddSingleton<IColorService, ColorManager>();
             services.AddSingleton<IColorDal, EfColorDal>();
 
+            services.AddSingleton<IBusService, BusManager>();
+            services.AddSingleton<IBusDal, EfBusDal>();
+
+            services.AddSingleton<IBoatService, BoatManager>();
+            services.AddSingleton<IBoatDal, EfBoatDal>();
+
 
             services.AddSwaggerGen(c =>
             {

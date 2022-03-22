@@ -42,7 +42,7 @@ namespace RepositoryOfVehicle.WebApi.Controllers
             return BadRequest(result);
 
         }
-        [HttpGet("detail")]
+        [HttpGet("color")]
         public IActionResult GetCarColorDetailsDto(string colorName)
         {
             var result = _carService.GetCarColorDetailsDto(colorName);
@@ -64,7 +64,7 @@ namespace RepositoryOfVehicle.WebApi.Controllers
             return BadRequest(result);
         }
 
-        [HttpPut]
+        [HttpPut()]
         public IActionResult Update(Car car)
         {
             var result = _carService.Update(car);

@@ -40,6 +40,17 @@ namespace RepositoryOfVehicle.WebApi.Controllers
             return BadRequest(result);
 
         }
+        [HttpGet("color")]
+        public IActionResult GetBusColorDetailsDto(string colorName)
+        {
+            var result = _busService.GetBusColorDetailsDto(colorName);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+        }
         [HttpPost]
         public IActionResult Add(Bus bus)
         {

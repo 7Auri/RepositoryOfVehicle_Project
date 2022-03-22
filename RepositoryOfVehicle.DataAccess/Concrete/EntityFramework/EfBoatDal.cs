@@ -21,8 +21,9 @@ namespace RepositoryOfVehicle.DataAccess.Concrete.EntityFramework
                          
                              select new BoatColorDetailsDto
                              {
-                                 ColorId = boat.Color.Id,
                                  BoatId = boat.Id,
+                                 BoatName =boat.Name,
+                                 ColorId = boat.Color.Id,
                                  ColorName = b.ColorName,
 
                              };

@@ -11,6 +11,7 @@ namespace RepositoryOfVehicle.Entities.DTOs
     {
         public int ColorId { get; set; }
         public int BusId { get; set; }
+        public string BusName { get; set; }
         public string ColorName { get; set; }
     }
 }
